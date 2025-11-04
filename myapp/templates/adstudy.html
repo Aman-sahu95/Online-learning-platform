@@ -1,0 +1,86 @@
+{%extends 'index.html'%}
+{%block body%}
+<div class="row my-5">
+        <div class="mt-2 col-md-8 mx-auto ">
+            <form action="" method="post" enctype="multipart/form-data" class="w-75 mx-auto shadow-lg rounded-4 p-5 " style="box-shadow: 0 0 10px rgba(13, 202, 240, 0.8) !important;">
+                {%csrf_token%}
+                <h1 class="text-info fw-bold text-center">
+                    {%if st%}
+                          Update
+                          {%else%}
+                          Add
+                          {%endif%}
+                </h1>
+                <br>
+                <label for="" class="text-light fw-bold pb-2">Select Course :</label>
+                <select name="course" id="" class="form-control rounded-pill ps-3 st">
+                    {%if st.course%}
+                    <option value="{{st.course}}">{{st.course}}</option>
+                    {%else%}
+                    <option value="">--Select Course--</option>
+                    {%endif%}
+                    
+                    {%for c in course%}
+                    {%if st.course != c.course%}
+                    <option value="{{c.course}}">{{c.course}}</option>
+                    {%endif%}
+                    
+                    {%endfor%}
+                </select>
+                <br>
+                <label for="" class="text-light fw-bold pb-2">Select Branch :</label>
+                <select name="branch" id="" class="form-control rounded-pill ps-3 st">
+                    {%if st.branch%}
+                    <option value="{{st.branch}}">{{st.branch}}</option>
+                    {%else%}
+                    <option value="">--Select Branch--</option>
+                    {%endif%}
+
+                    {%for i in branch%}
+                    {%if st.branch != i.branch%}
+                    <option value="{{i.branch}}">{{i.branch}}</option>
+                    {%endif%}
+                    {%endfor%}
+                </select>
+                <br>
+                 <label for="" class="text-light fw-bold pb-2">Select Session :</label>
+                <select name="session" id="" class="form-control rounded-pill ps-3 st">
+                    {%if st.session%}
+                    <option value="{{st.session}}">{{st.session}}</option>
+                    {%else%}
+                    <option value="">--Select Session--</option>
+                    {%endif%}
+
+                    {%for s in session%}
+                    {%if st.session != s.session%}
+                    <option value="{{s.session}}">{{s.session}}</option>
+                    {%endif%}
+                    {%endfor%}
+                </select>
+                <br>
+                 <label for="" class="text-light fw-bold pb-2">Enter Subject Name :</label>
+                <input type="text" value="{{st.subject}}" name="subject" class="form-control rounded-pill ps-3 st" placeholder="Enter Subject Name">
+                <br>
+                 <label for="" class="text-light fw-bold pb-2">Enter File Name :</label>
+                <input type="text" value="{{st.file_name}}" name="file_name" class="form-control rounded-pill ps-3 st" placeholder="Enter File Name">
+                <br>
+                 <label for="" class="text-light fw-bold pb-2">Upload File :</label>
+                <input type="file" name="file" class="form-control rounded-pill ps-3 st" id="">
+                <br>
+                {%if st.file%}
+                <small class="text-info"> If You want to change file then  only upload otherwise leave it</small>
+                <br>
+                {%endif%}
+                <br>
+
+                {%if st%}
+                <input type="submit" value="Add Study Material" name=""  class="btn btn-outline-info  form-control rounded-pill fw-bold">
+                {%else%}
+                <input type="submit" value="Add Study Material" name=""  class="btn btn-outline-info  form-control rounded-pill fw-bold">
+                {%endif%}
+            </form>
+        </div>
+    </div>
+     
+
+{%endblock%}

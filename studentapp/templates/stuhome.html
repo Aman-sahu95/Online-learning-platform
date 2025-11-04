@@ -1,0 +1,123 @@
+{%extends 'stuparent.html'%}
+{%block d%}
+:: Home
+{%endblock%}
+{%block body%}
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="text-center text-light mt-2"><span style="color: gold;">Dashboard</span> Overview</h1>
+
+  </div>
+</div>
+<div class="row p-3 g-4">
+  <div class="col-lg-5 col-md-12 bg-light p-4 rounded-4 shadow-sm">
+    <!-- profile card  -->
+     <div class="card mb-3 border-0 shadow-sm rounded-4">
+      <div class="row g-0 rounded-4 aa " style="box-shadow: 0 0.125rem 0.25rem rgba(1, 1, 91,5)  !important
+ ;">
+                <div class="col-md-4 text-center p-1">
+                    <img src="/media/{{stu.pic}}" class="img-fluid rounded-circle border h-100 w-100 shadow-sm" alt="Student">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body" >
+                        <h4 class="card-title fw-bold">{{stu.name}}</h4>
+                        <p class="mb-1"><b><i class="fa fa-phone text-primary"></i> Number:</b> {{stu.number}}</p>
+                        <p class="mb-1"><b><i class="fa fa-envelope text-danger"></i> Email:</b> {{stu.email}}</p>
+                        <p class="mb-1"><b><i class="fa fa-venus-mars text-success"></i> Gender:</b> {{stu.gender}}</p>
+                    </div>
+                </div>
+            </div>
+     </div>
+     <div class="card mb-3 border-0 shadow-sm rounded-4 aa" > 
+            <div class="card-body">
+                <p><b>👨 Father's Name:</b> {{stu.fname}}</p>
+                <p><b>👩 Mother's Name:</b> {{stu.mname}}</p>
+                <p><b>🎓 Course:</b> {{stu.course}}</p>
+                <p><b>📚 Branch:</b> {{stu.branch}}</p>
+                <p><b>📅 Session:</b> {{stu.session}}</p>
+                <p><b>🏠 Address:</b> {{stu.address}}</p>
+                <p><b>🕒 Reg Date:</b> {{stu.regdate}}</p>
+               
+            </div>
+        </div>
+        <!-- Stats Section -->
+    
+  </div>
+  <div class="col-lg-7 col-md-12">
+        <div class="row g-4">
+            <!-- Card Item -->
+            <div class="col-md-6">
+                <div class="stat-card p-4 rounded-4 shadow-lg d-flex align-items-center justify-content-between  aa text-light ">
+                    <div class="icon-circle bg-light text-dark shadow-sm">
+                        <i class="fa fa-book  fs-3"></i>
+                    </div>
+                    <div class="text-end">
+                        <h3 class="mb-0">{{stl}}</h3>
+                        <p class="mb-0">Study Material</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="stat-card p-4 rounded-4 shadow-lg d-flex align-items-center justify-content-between aa text-light">
+                    <div class="icon-circle bg-light text-dark shadow-sm">
+                        <i class="fa fa-newspaper fs-3"></i>
+                    </div>
+                    <div class="text-end">
+                        <h3 class="mb-0">{{nl}}</h3>
+                        <p class="mb-0">News</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="stat-card p-4 rounded-4 shadow-lg d-flex align-items-center justify-content-between aa text-light">
+                    <div class="icon-circle bg-light text-dark shadow-sm">
+                        <i class="fa fa-comments fs-3"></i>
+                    </div>
+                    <div class="text-end">
+                        <h3 class="mb-0">{{fel}}</h3>
+                        <p class="mb-0">Feedbacks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="stat-card p-4 rounded-4 shadow-lg d-flex align-items-center justify-content-between aa text-dark">
+                    <div class="icon-circle bg-light text-dark shadow-sm">
+                        <i class="fa fa-exclamation-circle fs-3"></i>
+                    </div>
+                    <div class="text-end">
+                        <h3 class="mb-0">{{ca}}</h3>
+                        <p class="mb-0">Complain</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <div class="stat-card p-4 rounded-4 shadow-lg d-flex align-items-center justify-content-between aa text-light">
+                    <div class="icon-circle bg-light text-dark shadow-sm">
+                        <i class="fa fa-lightbulb fs-3"></i>
+                    </div>
+                    <div class="text-end">
+                        <h3 class="mb-0">{{sul}}</h3>
+                        <p class="mb-0">Suggestion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+  .icon-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+</style>
+
+  {%endblock%}

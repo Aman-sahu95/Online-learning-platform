@@ -1,0 +1,65 @@
+{%extends 'parent.html'%}
+{%load static%}
+{%block body%}
+<!-- slider start  -->
+<div class="row p-0 mt-1">
+    <div class="col-sm-12 p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/chimacal.jpg'%}" class=" w-100 " alt="..." height="200px "
+                        style="opacity: 0.8;">
+                    <div class="carousel-caption  mb-5">
+                        <h2><b>Vocational Training</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- slider end -->
+
+        <!-- Certificate start  -->
+        <div class="row">
+            
+            <div class="col-sm-12 bg-light">
+                <div class="box">
+                   
+                    <div class="col-sm-10 mt-3 mb-5 ps-5 pe-4  " style=" margin-left: 70px; ">
+                        <p>Register for Counselling: Email - aseem.bhatnagar@biotechpark.org.in</p>
+                        <p>Last date for Registration :</p>
+                        <p>Courses Start on Commence shortly</p>
+                        <h5>IMPORTANT LINKS</h5>
+                        <table class="text-center text-white w-100 ms-2  bg-white" style="height: 30vh;">
+                            <tr class="bg-black " style="height: 7vh;">
+                              <th>Sr No</th>
+                              <th>Title</th>
+                              <th>Details</th>
+                            </tr>
+                           
+                            <tr class="text-black" style=" border-bottom: 1px solid rgb(200, 196, 196);">
+                                <td>1</td>
+                                <td>IMPORTANT LINKS</td>
+                                <td><button class="border-0 bg-primary text-white bc">Read More</button></td>
+                        </tr>
+                    
+                        <tr class="text-black" style=" border-bottom: 1px solid rgb(200, 196, 196);">
+                                <td>2</td>
+                                <td>About the Courses</td>
+                                <td><button class="border-0 bg-primary text-white bc">Read More</button></td>
+                                
+                        </tr>
+                        <tr class="text-black "style=" border-bottom: 1px solid rgb(200, 196, 196);">
+                                <td>3</td>
+                                <td>Mentors and Faculty</td>
+                                <td><button class="border-0 bg-primary text-white bc">Read More</button></td>
+                        </tr>
+                        </table>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Certificate end -->
+{%endblock%}

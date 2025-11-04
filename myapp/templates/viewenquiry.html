@@ -1,0 +1,31 @@
+{%extends 'index.html'%}
+{%block d%}
+  :: View Enquiry
+{%endblock%}
+{%block body%}
+<div class="row mt-5">
+        <div class="col-md-8 p-5 mx-auto bg-light rounded-3 table-responsive shadow-lg">
+            <h3 class="text-dark mb-4 fw-bold"><i class="fas fa-newspaper text-info me-2 fa-bounce"></i>View Study Material</h3>
+            <table class="table table-hover align-middle text-center shadow-sm rounded-3 overflow-hidden">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col" colspan="3">Message</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for e in et%}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{e.name}}</td>
+                        <td>{{e.number}}</td>
+                        <td>{{e.email}}</td>
+                        <td>{{e.message}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+{%endblock%}

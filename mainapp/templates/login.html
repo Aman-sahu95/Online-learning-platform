@@ -1,0 +1,16 @@
+{%extends 'parent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12 signin bg-dark">
+        <form action="" method="post" class="p-5 text-info text-center">
+            {%csrf_token%}
+            <h4 class="mb-5">Student Login</h4>
+            <input type="email" name="email" placeholder="Enter Your Name" class="form-control bg-transparent text-light" id="">
+            <br>
+            <input type="password" name="password" placeholder="Enter Your Password" class="form-control bg-transparent text-info" id="">
+            <br>
+            <input type="submit" name="" value="Login" class="form-control btn btn-outline-primary" id="">
+        </form>
+    </div>
+</div>
+{%endblock%}

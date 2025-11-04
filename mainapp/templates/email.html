@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome to Biotech Park OLP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* Reset & Base */
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6fb;
+        color: #333;
+    }
+    img { border: none; max-width: 100%; }
+    .container {
+        max-width: 700px;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    /* HEADER HERO */
+    .header {
+        background: linear-gradient(135deg, #009E66, #00B67A);
+        padding: 50px 25px 60px 25px;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    .header img.logo {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+    .header p {
+        margin-top: 8px;
+        font-size: 15px;
+        opacity: 0.9;
+    }
+    .wave {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+    }
+
+    /* CONTENT */
+    .content {
+        padding: 30px;
+        line-height: 1.6;
+    }
+    .intro {
+        background: #f8fdfb;
+        border-left: 5px solid #00B67A;
+        padding: 18px;
+        border-radius: 6px;
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    /* FEATURES */
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+    }
+    .feature {
+        flex: 1;
+        min-width: 180px;
+        background: #ffffff;
+        border: 1px solid #e8ebf0;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        transition: transform 0.3s ease;
+    }
+    .feature:hover {
+        transform: translateY(-3px);
+    }
+    .feature img {
+        width: 40px;
+        margin-bottom: 8px;
+    }
+    .feature h3 {
+        font-size: 15px;
+        margin: 5px 0;
+        color: #009E66;
+    }
+    .feature p {
+        font-size: 13px;
+        color: #555;
+    }
+
+    /* CREDENTIALS */
+    .credentials {
+        background: #f9fafc;
+        border: 1px solid #e0e4e8;
+        border-radius: 8px;
+        padding: 18px;
+        margin: 20px 0;
+        font-size: 15px;
+    }
+    .credentials strong {
+        color: #333;
+    }
+
+    /* CTA BUTTON */
+    .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        margin-top: 20px;
+        background: #00B67A;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+    .btn:hover {
+        background: #009E66;
+    }
+
+    /* FOOTER */
+    .footer {
+        background: #f3f4f6;
+        padding: 18px;
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+    }
+
+    /* RESPONSIVE */
+    @media only screen and (max-width: 600px) {
+        .features { flex-direction: column; }
+        .feature { min-width: 100%; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- HEADER -->
+    <div class="header">
+        <img src="https://biotechpark.org.in/Content/Biotech%20logo.jpg" class="logo" alt="Biotech Park Logo">
+        <h1>Welcome to Biotech Park OLP</h1>
+        <p>Empowering Biotechnology Through Digital Learning</p>
+        <svg class="wave" viewBox="0 0 500 50" preserveAspectRatio="none">
+            <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+        </svg>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <p>Dear <strong>{{ name }}</strong>,</p>
+
+        <div class="intro">
+            We are thrilled to welcome you to the <strong>Biotech Park, Lucknow - Online Learning Platform</strong>, your gateway to cutting-edge biotechnology education, online examinations, and collaboration with experts worldwide.
+        </div>
+
+        <!-- FEATURES -->
+        <div class="features">
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Courses">
+                <h3>113+ Courses</h3>
+                <p>Access biotechnology courses from 250+ study centers globally.</p>
+            </div>
+          
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/893/893292.png" alt="Updates">
+                <h3>Live Updates</h3>
+                <p>Stay connected with instant news & announcements.</p>
+            </div>
+        </div>
+
+        <!-- CREDENTIALS -->
+        <h3 style="color:#009E66; margin-top:20px;">Your Login Credentials</h3>
+        <div class="credentials">
+            <strong>Email:</strong> {{ email }}<br>
+            <strong>Password:</strong> {{ password }}
+        </div>
+
+        <a href="https://www.biotechpark.org.in/olp" class="btn">Access Your Dashboard</a>
+
+        <p style="margin-top:25px;">If you have any questions, our dedicated support team is always ready to assist you.</p>
+
+        <p>Warm Regards,<br><strong>Team Biotech Park OLP</strong></p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © {{ year }} Biotech Park, Lucknow. All Rights Reserved.
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- top header strt -->
+         <div class="row d-flex" style="background-color: rgb(4, 89, 209);">
+            <div class="col-md-6 text-white text-start  my-auto"> <i class="fa-regular fa-clock"></i> &nbsp;The Biotech Park Is Open From 10:00 am to 5:00 pm
+            </div>
+            <div class="col-md-6 text-end  my-auto "> 
+              <button class="btn btn-priamry btn-outline-white border border-1 border-white me-1"><a href="{%url 'mainapp:adlogin'%}"style="text-decoration:none;color:white">Admin</a></button>
+            
+
+              
+              
+                <span class="border border-1 p-1"style="color:rgb(18,121,5);background-color:white; border-radius:5px;"><i class="fa-brands fa-facebook  "></i></span>
+                <span class="border border-1 p-1"style="color:rgb(18,121,5);background-color:white; border-radius:5px;"><i class="fa-brands fa-twitter  "></i></span>
+                <span class="border border-1 p-1"style="color:rgb(18,121,5);background-color:white; border-radius:5px;"><i class="fa-brands fa-youtube  "></i></span>
+            </div>
+         </div>
+        <!-- top header end -->
+
+        <!-- navbar strt -->
+          
+          <div class="row">
+            <div class="col-sm-12 p-0 ">
+                <nav class="navbar navbar-dark  navbar-expand-lg bg-body-tertiary p-4" style="background-image:linear-gradient(to right,rgb(4, 89, 209),rgb(18,121,5));font-size:15px">
+                  <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button class="bg-transparent text-white d-flex border-0 text-center">
+                    <a class="navbar-brand" href="#"><img src="{%static 'img/Biotech logo.jpg' %}"  class="text-end"height="60px" alt=""></a>
+                    <div>
+                         
+                         <h5>Biotech Park, Lucknow</h5> 
+                    <h6 style="font-size:10px ;text-align:left;"><i>Where cutting edge science prospers...</i></h6>
+                    </div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="{%url 'mainapp:home'%}">Home |</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link  active hide-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style=>
+                            The Park &nbsp;|
+                          </a>
+                          <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:org'%}">Organization</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Why Biotech Park Lucknow?</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Location </a></li>
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:cert'%}">Certification</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Our Collabortaion</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Knowledge Network</a></li>
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:outreach'%}">Outreached Activites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}"><b>The People</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:ceo'%}">CEO</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Distuingshed Science and members</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Scietific Staff</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Adiminstraion</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Techincal Support</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link  active " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style=>
+                            Facilities  &nbsp;|
+                          </a>
+                          <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:service'%}">Services </a></li>
+                            <li><a class="dropdown-item" href="research.html">Reserach Parks And Lab</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Conference Hall</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link active hide-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style=>
+                            Skill Development &nbsp;|
+                          </a>
+                          <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="error.html">HRD Overview</a></li>
+                            <li><a class="dropdown-item bg-light" href="{%url 'mainapp:error'%}">Training Program and Educational Outreach</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="certificate.html">Certificate Courses Approved By <br />Baba Saheb Bhimrao Amdedkar University</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Up Skill Development Mission Sponsored</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:training'%}">Vocational Training</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link  active hide-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style=>
+                           Business &nbsp;|
+                          </a>
+                          <ul class="dropdown-menu ">
+                             <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Tenders</a></li>
+                             <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Policy Documents</a></li>
+                             <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Resident Companies</a></li>
+                             <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Biotech Funding</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="{%url 'mainapp:error'%}">Success Stories &nbsp;|</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="{%url 'mainapp:error'%}">News & Events &nbsp;|</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link  active hide-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style=>
+                           Contact Us&nbsp;|
+                          </a>
+                          <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Training Program For Student From North-East India</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Training Program </a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">Services</a></li>
+                            <li><a class="dropdown-item" href="{%url 'mainapp:error'%}">General</a></li>
+
+                          </ul>
+
+
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="{%url 'mainapp:registration'%}">Registrarion &nbsp;|</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="{%url 'mainapp:login'%}">Login &nbsp;|</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+            </div>
+          </div>
+          
+         <!-- navbar end -->
+
+         {%block body%}
+
+         {%endblock%}
+         <!-- footer strt -->
+              
+                  <div class="row">
+                    <div class="col-sm-12 bg-mix p-0">
+                      <img src="{%static 'img/image.png' %}" class="w-100 h-100" style="transform: rotate(180deg);"alt="">
+                    </div>
+                  </div>
+                  <div class="row bg-mix text-white pt-5">
+                    <div class="col-sm-3 p-4 ">
+                      <h4>Bio Tech Park Lucknow</h4>
+                      <h6>
+                        Biotech Park Sector G, Jankipuram, Kursi Road,<br>
+                         Lucknow - 226021 Uttar Pradesh - INDIA
+                      </h6>
+                      <p>
+                        <i class="fa-solid fa-phone"></i>&nbsp;<strong>Phone:</strong>91 522 4012091, 2365050 <br>
+                        <i class="fa-solid fa-envelope"></i>&nbsp;<strong> Email:</strong>psceo@biotechpark.org.in <br>
+                        <i class="fa-solid fa-envelope"></i>&nbsp;<strong> Email:</strong> services@biotechpark.org.in <br>
+                        <i class="fa-solid fa-envelope"></i>&nbsp;<strong> Email:</strong>psceo@biotechpark.org.in <br>
+                        <i class="fa-solid fa-envelope"></i>&nbsp;<strong> Email:</strong>trainingprograms@biotechpark.org.in <br><br>
+                        <span class="border-1 border-white border p-2 bg-white text-black" style="border-radius:5px"><i class="fa-brands fa-instagram"style="font-size:20px"></i></span>
+                        <span class="border-1 border-white border p-2 bg-white text-black" style="border-radius:5px"><i class="fa-brands fa-twitter "style="font-size:20px"></i></span>
+                        <span class="border-1 border-white border p-2 bg-white text-black" style="border-radius:5px"><i class="fa-brands fa-facebook"style="font-size:20px"></i></span>
+                        <span class="border-1 border-white border p-2 bg-white text-black" style="border-radius:5px"><i class="fa-brands fa-linkedin"style="font-size:20px"></i></span>
+                        <span class="border-1 border-white border p-2 bg-white text-black" style="border-radius:5px"><i class="fa-brands fa-google"style="font-size:20px"></i></span>
+                      </p>
+                    </div>
+                    <div class="col-sm-3 p-4">
+                      <h3>Bio-Tech Info</h3>
+                      <ul style="list-style:none">
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Policies</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Useful Links</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Networks</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Research Park</a><br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Contact Us</a><br></li>
+                      </ul>
+                      
+                    </div>
+                    <div class="col-sm-3 p-4">
+                      <h3>Important Links</h3>
+                      <ul style="list-style:none">
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Tenders</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Downloads</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">E-Calender</a> <br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">Directory</a><br></li>
+                      <li><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; <a style="text-decoration:none;color:white;"href="">WebMail</a><br></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-3 p-4 text-start">
+                      <h3>Certification</h3>
+                      <img class="h-50 w-100"src="{%static 'img/certification.jpg' %}" alt="">
+                      
+                      
+                    </div>
+                    <!-- copyright strt -->
+               
+                   <div class="row pe-0 ">
+                      <div class="col-sm-12 text-white text-center p-3 " style="border:2px dotted  white"> <h6>© Copyright 2024 Designed & Developed By | Softpro India Computer Technologies (P) Ltd.|| </h6></div>
+                    </div>  
+                 </div>
+                <!-- copyright end -->
+                 <img class="fixed-bottom" src="{%static 'img/whatsapp.png' %}"  style="margin:50px;"height="70"  width="70"alt="">
+                 
+                 <button class="bg-mix text-white fixed-bottom " style="transform:rotate(270deg);margin-left:1250px; width:150px ;margin-bottom:400px; height:40px; "><i class="fa-solid fa-user"></i><a style='text-decoration:none;color:white'href="{%url 'mainapp:enquiry'%}">Enquiry</a></button>
+                  <button class="bg-mix text-white fixed-bottom " style="transform:rotate(270deg); margin-left:1250px; width:150px ; margin-right:-20px;margin-bottom:200px; height:40px;"><i class="fa-solid fa-user"></i>Call Us</button>
+                 
+                
+
+               <!-- footer end -->
+             
+            <!-- <div class="col-sm-12 bg-black text-center mb-5 py-5 fs-3" style="display: flex; justify-content: space-between; ">
+               
+                <a href="/" style="text-decoration: none;">Home</a>
+                <a href="/about" style="text-decoration: none;">About</a>
+                <a href="adlogin" style="text-decoration: none;">Admin</a>
+                <a href="registration" style="text-decoration: none;" >Registration</a>
+                <a href="login" style="text-decoration: none;" >login</a>
+            </div>
+            <div class="col-sm-12">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

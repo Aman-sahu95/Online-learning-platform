@@ -1,0 +1,32 @@
+{%extends 'stuparent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="text-center  mt-2" style="color: gold;">Feedback</h2>
+    </div>
+</div>
+<div class="row">
+        <div class=" col-md-8 mx-auto  ">
+            <form action="" method="post" class="w-75 mx-auto shadow-lg rounded-3 p-5 bg-light" style="box-shadow: 0 0 20px rgb(252, 214, 0) !important;">
+                {%csrf_token%}
+                <h4 class=" fw-bold text-primary" >Add Feedback</h4>
+                <br>
+                
+                <select name="feedtype" class="form-control border border-dark " id="">
+                    <option value="">--Select Feedback Type--</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Suggestion">Suggestion</option>
+                    <option value="Complain">Complain</option>
+                </select>
+                <br>
+
+                <input type="text" name="title" value="" class="form-control border border-dark" placeholder="Enter Title"><br>
+               
+                
+                <textarea name="desc"  class="form-control boredr border-dark" placeholder="Enter Description" ></textarea>
+                <br>
+                <input type="submit" value="Add Feedback" class="btn btn-dark  form-control ">
+            </form>
+        </div>
+    </div>
+{%endblock%}

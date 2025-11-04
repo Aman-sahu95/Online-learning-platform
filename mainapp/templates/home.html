@@ -1,0 +1,300 @@
+{%extends 'parent.html'%}
+{%load static%}
+{%block body%}
+          <!-- slider strt -->
+           <div class="row">
+            <div class="col-sm-12 p-0">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="{% static 'img/slider.jpg' %}" class="d-block w-100" alt="...">
+                      <div class="carousel-caption">
+
+                        <div class="box text-start p-4"
+                             style=" margin-top: -420px; margin-left: -170px; width:70%; background-color: rgba(13, 105, 196, 0.689);">
+
+                            <h5 style="font-size: 50px;" class="fw-bold ">Functional Biotech Park In North India</h5>
+                            <p>
+                                Bio Tech Park is India&#39;s top research center, leading in biotechnology and scientific advancements
+                            </p>
+                            <button style="background-color: rgb(8, 169, 8); border:0px; padding: 10px; color:white;">
+                                Explore Now
+                            </button>
+                        </div>
+                    </div>
+
+                    </div>
+                    
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+           </div>
+          <!-- slider end -->
+           <!-- announcement strt -->
+            <div class="row p-4">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-3 p-1 ps-4 text-white bg-hara" ><h4>Announcement</h4></div>
+                        <div class="col-sm-9 bg-neela text-white pt-1">
+                            <marquee behavior="" direction="to left" > <img src="{% static 'img/new1.gif' %}" alt="" height="15">Join our webinar on Bioinformatics, &quot;Unlocking the Power of Bioinformatics,&quot; on September 14th, 2024, at 11:00 AM!
+                            <a class="text-white"href=""> <strong>Register Here</strong></a></marquee>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+           <!-- announcement end -->
+            <!-- we cover the wholw strt -->  
+             <div class="row p-2 bg-light">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h1>We Cover The Whole Spectrum</h1>
+                    <div  class="bg-primary"style="height: 3px; width: 18%; margin: 10px left 0;"></div>
+                </div>
+                <div class="col-sm-1"></div>
+             </div>
+            <!-- we cover the wholw end -->
+             <!-- card upr wale ke strt -->
+             
+            <div class="row bg-light py-4">
+                <div class="col-sm-1 "></div>
+                <div class="col-sm-10 ">
+              
+                  <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col ">
+                      <div class="card h-100">
+                        <img src="{% static 'img\infra.jpg' %}" class="card-img-top" alt="..." height=250>
+                        <div class="card-body">
+                          <a href="#" class="btn btn-white text-primary fs-5 fw-bold">Modern Infrastructure</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="{% static 'img\hitech.jpeg' %}" class="card-img-top h-100" alt="...">
+                        <div class="card-body">
+                          <a href="#" class="btn btn-white text-primary fs-5 fw-bold">Hi-tech Laboratries</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="{% static 'img\skill.jpeg' %}" class="card-img-top h-100" alt="...">
+                        <div class="card-body">
+                          <a href="#" class="btn btn-white text-primary fs-5 fw-bold">Skill Development</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="{% static 'img\clean.jpg' %}" class="card-img-top h-100" alt="...">
+                        <div class="card-body">
+                          <a href="#" class="btn btn-white text-primary fs-5 fw-bold">Clean Environment</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-sm-1 "></div>
+           </div>
+             <!-- card upr wale ke end -->
+              <!-- about biotech park strt -->
+              <div class="row bg-mix ps-5">
+                <div class="col-sm-6 text-white pt-5" style="padding-left:20px">
+                    <h1>About Biotech Park</h1>
+                    <hr>
+                    <p style="text-align:justify; font-size:17px">
+                        Welcome to Bio Tech Lucknow, India’s premier research center dedicated to pioneering advancements in biotechnology. As the nation’s number one research hub, we are at the forefront of innovative scientific research, driving breakthroughs that shape the future of healthcare, agriculture, and environmental sustainability. Our state-of-the-art facilities and world-class laboratories are staffed by a team of distinguished scientists and researchers committed to excellence. At Bio Tech Lucknow, we focus on cutting-edge research in genomics, bioinformatics, and molecular biology, striving to translate scientific discoveries into practical solutions that benefit society. We pride ourselves on fostering a collaborative environment that encourages creativity and innovation. Our partnerships with leading academic institutions, industry leaders, and government agencies enable us to stay ahead in the rapidly evolving field of biotechnology. Join us in our mission to push the boundaries of science and improve the quality of life through groundbreaking research and sustainable technological advancements. Bio Tech Lucknow is not just a research center; it is a beacon of progress and a catalyst for change in the biotech landscape of India.
+                    </p>
+                </div>
+                <div class="col-sm-6 mx-auto my-auto p-5">
+                   <iframe class="w-100 "  height="350" src="https://www.youtube.com/embed/n4XnjmavROw?si=kJ_rfg7Ab4700SEe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+             <!-- about biotech park end -->
+              <!-- our mentors  strt-->
+             
+          <div class="row bg-light py-4">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10 ">
+                <h1 class="text-black fw-bold">Our Mentors 
+                  <div  class="bg-primary"style="height: 3px; width: 5%; margin: 10px left 0;"></div>
+                </h1>
+              </div>
+          </div>
+             <div class="row bg-light py-3">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10 ">
+               <div class="row row-cols-1 row-cols-md-4 g-4">
+                   <div class="col">
+                    <div class="card  p-4 text-center h-100 rounded-4 shadow bg-white">
+                   <img src=" {% static 'img/Govermer.jpg' %}" class="card-img-top rounded-circle p-2 h-100 " alt="..." style="border-radius:10% 50% 25% 50%; border:2px solid rgb(18,121,5)">
+                          <div class="card-body">
+                   <h5 class="card-title text-neela text-center">Smt. Anandiben Patel</h5>
+                             <p class="card-text text-center fw-semibold">Hon'ble Governor <br>Uttar Pradesh </p>
+                </div>
+                     </div>
+                    </div>
+                      <div class="col">
+                   <div class="card p-4 text-center h-100 rounded-4 shadow bg-white ">
+                     <img src=" {% static 'img/yogiji.jpg' %}" class="card-img-top rounded-circle p-2 h-100" alt="..."style="border-radius:50%; border:2px solid rgb(18,121,5)">
+                       <div class="card-body">
+                       <h5 class="card-title text-neela text-center fw-semibold ">Shri Yogi Adityanath</h5>
+                   <p class="card-text text-center fw-semibold">Hon'ble Chief Minister <br>Uttar Pradesh</p>
+                        </div>
+                       </div>
+                      </div>
+                  <div class="col">
+                <div class="card p-4 text-center h-100 rounded-4 shadow bg-white">
+                <img src="{% static 'img/Minister2.jpg' %}" class="card-img-top rounded-circle p-2 h-100" alt="..." style="border-radius:50%; border:2px solid rgb(18,121,5)">
+                <div class="card-body">
+                     <h5 class="card-title text-neela text-center">Shri Anil Kumar</h5>
+                   <p class="card-text text-center fw-semibold">Hon’ble Cabinet Minister<br>DST, GoUP</p>
+                </div>
+                    </div>
+                    </div>
+            <div class="col">
+               <div class="card p-4 text-center h-100 rounded-4 shadow bg-white">
+               <img src="{% static 'img/Prof JP Pandey.jpg' %}" class="card-img-top rounded-circle p-2 h-100" alt="..."style="border-radius:50%; border:2px solid rgb(18,121,5)">
+                <div class="card-body">
+                 <h5 class="card-title text-neela text-center">Prof. J. P. Pandey</h5>
+                  <p class="card-text text-center fw-semibold">Vice Chancellor, AKTU<br>Uttar Pradesh</p>
+                    </div>
+                       </div>
+                       </div>
+                        </div>
+
+
+                
+              </div>
+              <div class="col-sm-1"></div>
+          </div>
+          
+            <!-- our mentors  end-->  
+             <!-- agriculture Services Industry strt -->
+              <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-11">
+                    <h1>Agriculture Services Industry</h1><div  class="bg-primary"style="height: 3px; width: 17%; margin: 10px left 0;"></div></h1></div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-6 p-4">
+                                <h4 onmouseover="mouseOverOut()"><a  style="text-decoration:none;color:black"href="">1. Agriculture & Health</a></h4><hr>
+                                <h4 onmouseover="mouse2OverOut()"><a  style="text-decoration:none;color:black"href="">2. Chemical & Metrical</a></h4><hr>
+                                <h4><a  style="text-decoration:none;color:black"href="">3. Soil Analysis</a></h4><hr>
+                                <h4><a  style="text-decoration:none;color:black"href="">4. Soil Tillage</a></h4><hr>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <img  id="img1" src="{% static 'img/ag.jpeg' %}" class="w-100" height="250"alt="">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+             
+             <!-- agriculture Services Industry end --> 
+              <!--Training strt -->
+           
+              <div class="row bg-mix">
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 text-start text-white p-3  ">
+                  <h2 class=" fw-bold">Training Programme For Students <div  class="bg-primary"style="height: 3px; width: 25%;  margin: 10px start 0;"></div></h2>
+                </div>
+                <div class="col-sm-1"></div>
+                </div> 
+            
+          
+            
+                <div class="row bg-mix py-4 ">
+                <div class="col-sm-1 "></div>
+                <div class="col-sm-10 ">
+                
+                  <div class="row row-cols-1 row-cols-md-4 g-4 pb-4">
+                    <div class="col ">
+                      <div class="card h-100 p-2">
+                        <img src="{% static 'img\tra2.jp'%}g" class="card-img-top h-75" alt="..." height=250>
+                          <div class="card-body text-center" >
+                               <h5 class="card-title fw-bold">Bioinformatics</h5>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 p-2">
+                        <img src="{% static 'img\tra3.jp'%}g" class="card-img-top h-75" alt="...">
+                        <div class="card-body text-center" >
+                               <h6 class="card-title fw-bold">Industrial Biotechnology</h6>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 p-2">
+                        <img src="{% static 'img\tra5.jpe'%}g" class="card-img-top h-75" alt="...">
+                         <div class="card-body text-center" >
+                               <h5 class="card-title fw-bold">Microbiology</h5>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 p-2 ">
+                        <img src="{% static 'img\tra6.jpg'%}" class="card-img-top h-75" alt="...">
+                         <div class="card-body text-center" >
+                               <h5 class="card-title fw-bold">Plant Tissue Culture</h5>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-sm-1 "></div>
+              </div>
+                <div class="row bg-mix ">
+                  <div class="col-sm-12 text-center">
+                      <button class="border-0 bg-light mb-4 p-2  px-3">Read more</button>
+                  </div>
+                </div>
+           
+         
+           <!--Training end --> 
+           <!-- our client strt -->
+           
+               <div class="row bg-light">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-11 p-4">
+                  <h2>OUR CLIENTS</h2><div class="bg-primary" style="height: 3px; width: 5%; margin: 10px left 0;"></div>
+                 </div>
+               </div>
+               <div class="row bg-light">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                  <div class="row">
+                      <div class="col-sm-2 mx-auto  "><img class="h-75 w-100" src="{% static 'img/cp6.jpg'%}" class="mx-auto" alt=""></div>
+                      <div class="col-sm-2 mx-auto"><img class="h-75  w-100"src="{% static 'img/cp5.jpg'%}" class="mx-auto" alt=""></div>
+                      <div class="col-sm-2 mx-auto"><img class="h-75 w-100"src="{% static 'img/cl1.png'%}" class="mx-auto" alt=""></div>
+                      <div class="col-sm-2 mx-auto"><img class="h-75 w-100" src="{% static 'img/cp1.png'%}" class="mx-auto" alt=""></div>
+                  </div>
+                </div>
+                <div class="col-sm-1"></div>
+                
+               </div>
+           
+              <!-- our client end -->
+{%endblock%}

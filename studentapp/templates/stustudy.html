@@ -1,0 +1,34 @@
+{%extends 'stuparent.html'%}
+{%block d%}
+  :: View Student material
+{%endblock%}
+{%block body%}
+<div class="row mt-5">
+        <div class="col-md-8 p-5 mx-auto bg-light rounded-3 table-responsive shadow-lg">
+            <h3 class="text-dark mb-4 fw-bold"><i class="fas fa-newspaper text-info me-2 fa-bounce"></i>View Study Material</h3>
+            <table class="table table-hover align-middle text-center shadow-sm rounded-3 overflow-hidden">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">S .no</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">Session</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">File</th>
+                        <th scope="col" colspan="3">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for i in st%}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.course}}</td>
+                        <td>{{i.branch}}</td>
+                        <td>{{i.session}}</td>
+                        <td>{{i.subject}}</td>
+                        <td>{{i.file_name}}</td>
+                        <td><a href="/media/{{i.file}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+{%endblock%}

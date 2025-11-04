@@ -1,0 +1,70 @@
+{%extends 'index.html'%}
+{%block d%}
+  ::index
+{%endblock%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center text-light mt-2"><span class="text-info">Dashboard</span> Overview</h1>
+        
+    </div>
+</div>
+<div class="row mt-5">
+  <div class="col-sm-11 mx-auto bg-light p-5 rounded-5 shadow-lg">
+    <div class="row my-5">
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-book fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{stl}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>Study Material</h4>
+      </div>
+      </div>
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-user fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{stul}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>Student</h4>
+      </div>
+      </div>
+    </div>
+     <div class="row my-5">
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-newspaper fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{nl}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>News</h4>
+      </div>
+      </div>
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-message fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{fel}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>Feedback</h4>
+      </div>
+      </div>
+    </div>
+     <div class="row my-5">
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-message fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{ca}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>Complain</h4>
+      </div>
+      </div>
+      <div class="col-md-5 p-5 mx-auto text-light bg-dark rounded-5 shadow-lg d-flex justify-content-between aa">
+      <i class="fa fa-message fs-1 my-auto"></i>
+      <div class="my-auto">
+        <h4 class="text-center">{{sul}}</h4>
+        <!-- <h4></h4>  -->
+         <h4>Suggestion</h4>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

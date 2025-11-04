@@ -1,0 +1,50 @@
+{%extends 'index.html'%}
+{%block d%}
+  :: News
+{%endblock%}
+{%block body%}
+
+    <div class="row my-5">
+        <div class="mt-2 col-md-8 mx-auto  ">
+            <form action="" method="post" class="w-75 mx-auto shadow-lg rounded-4 p-5 " style="box-shadow: 0 0 10px rgba(13, 202, 240, 0.8) !important;">
+                {%csrf_token%}
+                <h1 class="text-info fw-bold text-center">Add News</h1>
+                <br>
+                <label for="" class="text-light fw-bold pb-2">Enter Title :</label>
+                <input type="text" name="title" value="{{n.title}}" class="form-control rounded-pill ps-3 st" placeholder="Entar Title"><br>
+               
+                <label for="" class="text-light fw-bold pb-2">Enter Description :</label>
+                <textarea name="desc"  class="form-control rounded-pill ps-3" placeholder="Enter Description" >{{n.desc}}</textarea>
+                <br>
+                <input type="submit" value="Add news" class="btn btn-outline-info  form-control rounded-pill fw-bold">
+            </form>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-8 p-5 mx-auto bg-light rounded-3 table-responsive shadow-lg">
+            <h3 class="text-dark mb-4 fw-bold"><i class="fas fa-newspaper text-info me-2 fa-bounce"></i>View News</h3>
+            <table class="table table-hover align-middle text-center shadow-sm rounded-3 overflow-hidden">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">S no.</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col" colspan="2">Action</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {%for n in news%}
+                <tr class="align-middle">
+                    <td class="fw-semibold">{{forloop.counter}}</td>
+                    <td class="fw-bold">{{n.title}}</td>
+                    <td>{{n.desc}}</td>
+                    <td><a href="{%url 'myapp:editnews' n.id %}" class="btn btn-outline-warning btn-sm shadow-sm"><i class="fa fa-edit"></i> Edit</a></td>
+                    <td><a href="{%url 'myapp:deletenews' n.id %}" class="btn btn-outline-danger btn-sm shadow-sm"><i class="fa fa-trash"></i> Delete</a></td>
+                </tr>
+                </tbody>
+                {%endfor%}
+            </table>
+        </div>
+    </div>
+{%endblock%}

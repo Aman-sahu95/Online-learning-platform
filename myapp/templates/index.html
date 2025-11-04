@@ -1,0 +1,121 @@
+<!-- {%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+   <a href="adnews/"> <img src="{% static 'img/img2.jpg'%}" alt="" class="w-25" ></a>
+   <div class="box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html> -->
+
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {%block title%}
+         Biotech's Admin
+         {%block d%}
+         Admin Panel
+        {%endblock%}
+      {%endblock%}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <style>
+      .aa:hover{
+        color: #0dcaf0 !important;
+        border: 1px solid #0dcaf0;
+        background-color: #212529 !important;
+        box-shadow: 0 0.125rem rgba(13, 202 , 240, 5) !important;
+
+      }
+      .st,textarea{
+        background-color: #212529 !important;
+        color: #f8f9fa !important;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+      }
+      .st:focus,textarea:focus{
+         border: 1px solid #0dcaf0 !important;
+         box-shadow: 0,0,10px rgba(13, 202, 240, 0.8) !important;
+         background-color: #1c1f23 !important;
+         color: #f8f9fa !important  ;
+      }
+      .table-hover tbody tr:hover{
+        background-color: rgba(13, 202, 240, 0.3) !important;
+        transform: scale(1.01);
+        transition: 0.2s ease-in-out;
+      }
+      .table{
+        border-radius: 12px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-black">
+        <div class="row bg-dark text-light rounded-5 py-2 " style="height: 8vh;">
+            <div class="col-lg-3 my-auto ms-5 "><h2><i class="fa-solid fa-user-shield text-info me-2 "></i><span class="text-info">Admin</span> Panel</h2></div>
+            <div class="col-lg-8 text-end my-auto">
+                <a href="{%url 'mainapp:logout'%}" class="btn btn-danger btn-sm mb-2">
+                  <i class="fa-solid fa-arrow-right-from-bracket "></i>
+                </a>
+            </div>
+        </div>
+        <div class="row bg-black" style="height:92vh;">
+          <div class="col-lg-2 bg-dark h-90 shadow-lg rounded-5 my-2" style="overflow:auto;">
+            <ul class="mt-5  list-unstyled ">
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adhome' %}" class="nav-link fw-bold"><i class="fa-solid fa-gauge fa-bounce me-2"></i>Dashboard</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adstu'%}" class="nav-link fw-bold"><i class="fa-solid fa-users fa-fade me-2"></i>View student</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adnews'%}" class="nav-link fw-bold"><i class="fa-solid fa-newspaper fa-bounce me-2"></i>Add News</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adbranch'%}" class="nav-link fw-bold"><i class="fa-solid fa-code-branch fa-fade me-2"></i>Add Branch</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adcourse'%}" class="nav-link fw-bold"><i class="fa-solid fa-book-open fa-bounce me-2"></i>Add Course</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adsession'%}" class="nav-link fw-bold"><i class="fa-solid fa-calendar-days fa-fade me-2"></i>Add session</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:adstudy'%}" class="nav-link fw-bold"><i class="fa-solid fa-file-lines fa-bounce "></i>Add Study Material</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'myapp:viewstudy'%}" class="nav-link fw-semibold "><i class="fa-solid fa-eye fa-fade "></i>View study Material</a>
+              </li>
+              <li class="bg-light text-dark my-3 p-2 rounded-2 mx-2 aa">
+                <a href="{%url 'mainapp:viewenquiry'%}" class="nav-link fw-semibold "><i class="fa-solid fa-eye fa-fade "></i>View Enquiry</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-10 h-100">
+            <div class="row h-100">
+              <div class="col-11 mx-auto bg-dark h-90 my-2 shadow-lg rounded-5" style="overflow: auto;">
+                {%block body%}
+                <h1 class="text-light">Dashboard</h1>
+                {%endblock%}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

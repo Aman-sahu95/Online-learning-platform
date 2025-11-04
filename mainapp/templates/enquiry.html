@@ -1,0 +1,30 @@
+{%extends 'parent.html' %}
+{%load static%}
+{%block body%}
+
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <form action="" method="post" class="form w-75 rounded-3 bg-mix border
+        border-2 border-white shadow mx-auto p-5 text-light">
+            {%csrf_token%}
+            <h5>Do You Have Any Query</h5>
+            <hr>
+            <br>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter Your Name" name="name" class="form-control border-dark">
+            <br>
+            <label for="">Mobile</label>
+            <input type="number" placeholder="Enter Your Number" name="number" class="form-control border-dark">
+            <br>
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter Your E-mail" name="email" class="form-control border-dark">
+            <br>
+            <label for="">Message</label>
+            <textarea name="message"  placeholder="Enter Your Query" id="" class="form-control border-dark"></textarea>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-light form-control">
+        </form>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,48 @@
+{%extends 'index.html'%}
+{%block d%}
+ :: View Student
+{%endblock%}
+{%block body%}
+<div class="row mt-5">
+        <div class="col-md-12 p-5 mx-auto bg-light rounded-3 table-responsive shadow-lg">
+            <h3 class="text-dark mb-4 fw-bold"><i class="fas fa-newspaper text-info me-2 fa-bounce"></i>View Student</h3>
+            <table class="table table-hover align-middle text-center shadow-sm rounded-3 overflow-hidden">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">Session</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">F'Name</th>
+                        <th scope="col">M'Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Address</th>
+                        <th scope="col" colspan="2">File</th>
+                        <!-- <th scope="col" colspan="3">Action</th>  -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for i in stu%}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.course}}</td>
+                        <td>{{i.branch}}</td>
+                        <td>{{i.session}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.fname}}</td>
+                        <td>{{i.mname}}</td>
+                        <td>{{i.number}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.gender}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.file_name}}</td>
+                        <td><a href="/media/{{i.pic}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a></td>
+                        <!-- <td><a href="" class="btn btn-outline-warning btn-sm shadow-sm"><i class="fa fa-edit"></i></a></td>
+                        <td><a href="" class="btn btn-outline-danger btn-sm shadow-sm"><i class="fa fa-trash"></i></a></td> -->
+                    </tr>
+                    {%endfor%}
+                </tbody>
+{%endblock%}

@@ -1,0 +1,65 @@
+{%extends 'parent.html'%}
+{%load static%}
+{%block body%}
+
+<!-- slider start  -->
+<div class="row p-0 mt-1">
+    <div class="col-sm-12 p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/chimacal.jpg'%}" class=" w-100 " alt="..." height="200px "
+                        style="opacity: 0.8;">
+                    <div class="carousel-caption  mb-5">
+                        <h2><b>Certification</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- slider end -->
+ <!-- Certificate start  -->
+         <div class="row">
+            <div class="col mt-4 ms-5 ps-5">
+                <h5>Certifications</h5>
+                <ul>
+                    <li>DSIR Recognition</li>
+                    <li>Licensing Of Ayurvadic Testing Laboratory (2016)</li>
+                    <li>NABL Accreditation as per ISO/IEC 17025:2005 of QAQC Laboratory (2018-2020)</li>
+                    <li>Quality Management System (ISO 9001: 2008) of QAQC Laboratory (2009)</li>
+                    <li>Environmental Management System (ISO 14001: 2015) Certification of Biotech Park, Lucknow</li>
+                    <li>Approved Government Training Partner of ‘Uttar Pradesh Skill Development Mission’</li>
+                </ul>
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-md-4 g-4 mb-5  " >
+  <div class="col">
+    <div class="card py-2 border-0" style="box-shadow: 0rem 0.5rem 1rem  rgb(222, 220, 220);" >
+      <img src="{% static 'img/dsr.jpj.jpg'%}" class="card-img-top py-2 px-3" alt="..." >
+      
+    </div>
+  </div>
+  <div class="col">
+    <div class="card py-2 border-0 " style="box-shadow: 0rem 0.5rem 1rem  rgb(222, 220, 220);">
+      <img src="{% static 'img/lab.png'%}" class="card-img-top py-2 px-4" alt="...">
+      
+    </div>
+  </div>
+  <div class="col">
+    <div class="card py-1 border-0" style="box-shadow: 0rem 0.5rem 1rem  rgb(222, 220, 220);">
+      <img src="{% static 'img/crti1.jpeg'%}" class="card-img-top py-2 px-4" alt="...">
+      
+    </div>
+  </div>
+  <div class="col">
+    <div class="card py-2 border-0" style="box-shadow: 0rem 0.5rem 1rem  rgb(222, 220, 220);">
+      <img src="{% static 'img/carti5.jpeg'%}" class="card-img-top py-2 px-4" alt="...">
+      
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+         </div>
+        <!-- Certificate end -->
+{%endblock%}

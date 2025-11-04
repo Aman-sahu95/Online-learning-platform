@@ -1,0 +1,70 @@
+{%extends 'parent.html'%}
+{%block body%}
+<div class="row mt-2" style="background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18,121,5));">
+    <div class="col-md-8 mx-auto p-5">
+     <form action="" enctype="multipart/form-data" method="post" class="w-75 mx-auto p-5 bg-light shadow-lg rounded-5">
+        {%csrf_token%}
+        <h3 class="text-center"><span class="text-primary">Student</span> <span class="text-success">Registration</span></h3>
+        <br>
+        <label for="">Enter Your Name :</label>
+        <input type="text" name="name" id="" class="form-control rounded-pill " placeholder="Enter Name">
+        <br>
+        <label for="">Enter Your F'name :</label>
+        <input type="text" name="fname" class="form-control rounded-pill" id="" placeholder="Enter Father Name"> 
+        <br>
+        <label for="">Enter Your M'name :</label>
+        <input type="text" name="mname" class="form-control rounded-pill" id="" placeholder="Enter Mother Name">
+        <br>
+        <label for="">Enter Your Number :</label>
+        <input type="number" name="number" class="form-control rounded-pill" id="" placeholder="Enter Phone Number">
+        <br>
+        <label for="">Enter Your Email :</label>
+        <input type="email" name="email" class="form-control rounded-pill" id="">
+        <br>
+        <label for="">Enter Your Password :</label>
+        <input type="password" name="password" class="form-control rounded-pill" id="">
+        <br>
+        <label for="">Enter Your Gender:</label>
+        <br>
+        <input type="radio" name="gen "class="form-radio " id="" value="male">Male
+        <br>
+        <input type="radio" name="gen "class="form-radio " id="" value="female">Female
+        <br>
+        <br>
+        <label for="">Select Your Course :</label>
+        <select name="course" id="" class="form-control rounded-pill">
+            <option value="">--Select Course--</option>
+            {%for c in course%}
+            <option value="{{c.course}}">{{c.course}}</option>
+            {%endfor%}
+        </select>
+        <br>
+        <label for="">Select Your Branch :</label>
+        <select name="branch" id="" class="form-control rounded-pill">
+            <option value="">--Select Branch--</option>
+            {%for b in branch%}
+            <option value="{{b.branch}}">{{b.branch}}</option>
+            {%endfor%}
+        </select>
+        <br>
+        <label for="">Select Your Session :</label>
+        <select name="session" id="" class="form-control rounded-pill">
+            <option value="">--Select Session--</option>
+            {%for s in session%}
+            <option value="{{s.session}}">{{s.session}}</option>
+            {%endfor%}
+        </select>
+        <br>
+        <label for="">Enter Your Address :</label>
+        <textarea name="address" class="form-control rounded-pill" id=""></textarea>
+        <br>
+        <label for="">Upload Pic :</label>
+        <input type="file" name="pic" class="rounded-pill form-control" id="">
+        <br>
+        <input type="submit" value="Register" class="btn text-light" style="background-image: linear-gradient(to right,rgb(4, 89, 209),rgb(18,121,5));"> 
+     </form>
+
+    
+    </div>
+</div>
+{%endblock%}
